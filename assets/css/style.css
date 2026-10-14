@@ -1,0 +1,15 @@
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scroll-left 15s linear infinite;
+}
+
+.scroll-text:hover {
+    animation-play-state: paused; /* pause on hover */
+}
+
+@keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
