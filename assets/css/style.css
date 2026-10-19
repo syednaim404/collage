@@ -1,15 +1,212 @@
-.scroll-text {
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* navbar section  */
+.navbar .navbar-nav .nav-link {
+    color: #fff !important;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* underline (শুরুতে width 0) */
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+/* hover করলে বাম থেকে ডানে আসবে */
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link:focus::before {
+    width: 100%;
+}
+
+
+
+
+
+/* scroll text section  */
+.notice-content {
+    overflow: hidden;
+    white-space: nowrap;
+    flex-grow: 1;
+}
+
+.notice-text {
     display: inline-block;
     white-space: nowrap;
     padding-left: 100%;
-    animation: scroll-left 15s linear infinite;
+    animation: notice-scroll var(--scroll-duration, 15s) linear infinite;
 }
 
-.scroll-text:hover {
-    animation-play-state: paused; /* pause on hover */
+@keyframes notice-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }
 
-@keyframes scroll-left {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+
+
+
+/* notice section  */
+.notice-link {
+    color: #263d64;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.notice-link:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+/* Download icon button */
+.notice-table .btn-outline-primary {
+    color: #263d64;
+    border-color: #263d64;
+}
+
+.notice-table .btn-outline-primary:hover {
+    background-color: #263d64;
+    color: #fff;
+}
+
+/* icon button gulo soman size */
+.notice-table .btn-sm {
+    width: 34px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notice-table td:last-child {
+    white-space: nowrap;
+}
+
+/* আরও নোটিশ button */
+.more-btn {
+    background-color: #263d64;
+    color: #fff;
+    border: 2px solid #263d64;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.more-btn:hover {
+    background-color: transparent;
+    color: #263d64;
+}
+
+.more-btn i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.more-btn.open i {
+    transform: rotate(180deg);
+}
+
+
+
+
+
+
+
+
+/* footer section  */
+.site-footer {
+    background: #172337;
+    color: #d0d8e4;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.footer-title::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #198754;
+    margin-top: 10px;
+}
+
+.site-footer p {
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #d0d8e4;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #20c997;
+    padding-left: 5px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #26364d;
+    color: #ffffff;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    background: #198754;
+    transform: translateY(-4px);
+}
+
+.footer-divider {
+    border-color: #526074;
+    margin: 35px 0 20px;
 }
