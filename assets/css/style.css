@@ -65,69 +65,17 @@
 
 
 
-
-/* notice section  */
-.notice-link {
-    color: #263d64;
-    text-decoration: none;
-    font-weight: 500;
+/* Notice Section */
+.notice .table td a:hover {
+    color: #0d6efd !important;
+    text-decoration: underline !important;
 }
 
-.notice-link:hover {
-    color: #0d6efd;
-    text-decoration: underline;
-}
-
-/* Download icon button */
-.notice-table .btn-outline-primary {
-    color: #263d64;
-    border-color: #263d64;
-}
-
-.notice-table .btn-outline-primary:hover {
-    background-color: #263d64;
+.notice .table thead.notice-header th {
+    background-color: #198754;
     color: #fff;
+    border-color: #198754;
 }
-
-/* icon button gulo soman size */
-.notice-table .btn-sm {
-    width: 34px;
-    height: 32px;
-    padding: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.notice-table td:last-child {
-    white-space: nowrap;
-}
-
-/* আরও নোটিশ button */
-.more-btn {
-    background-color: #263d64;
-    color: #fff;
-    border: 2px solid #263d64;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-}
-
-.more-btn:hover {
-    background-color: transparent;
-    color: #263d64;
-}
-
-.more-btn i {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
-.more-btn.open i {
-    transform: rotate(180deg);
-}
-
-
-
 
 
 
