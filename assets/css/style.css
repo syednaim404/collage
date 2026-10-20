@@ -4,7 +4,7 @@
     margin: 0;
 }
 
-/* navbar section  */
+/* ---------- navbar section ---------- */
 .navbar .navbar-nav .nav-link {
     color: #fff !important;
     position: relative;
@@ -17,7 +17,7 @@
     padding-bottom: 8px;
 }
 
-/* underline (শুরুতে width 0) */
+/* navmenu underline  */
 .navbar-nav .nav-link::before {
     content: "";
     position: absolute;
@@ -39,7 +39,7 @@
 
 
 
-/* scroll text section  */
+/* ---------- scroll text section ----------  */
 .notice-content {
     overflow: hidden;
     white-space: nowrap;
@@ -64,10 +64,9 @@
 }
 
 
-
-/* Notice Section */
+/* ----------Notice Section ---------- */
 .notice .table td a:hover {
-    color: #0d6efd !important;
+    /* color: #0d6efd !important; */
     text-decoration: underline !important;
 }
 
@@ -77,11 +76,118 @@
     border-color: #198754;
 }
 
+.view-all-btn {
+    background: #eff6ff;
+    color: #2563eb;
+    border: none;
+    border-radius: 999px;
+    padding: 8px 20px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.view-all-btn:hover {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+/*------------- principle card section ----------- */
+
+.teacher-card {
+    width: 350px;
+    max-width: 100%;
+    padding: 20px 16px 16px;
+    text-align: center;
+    background: #ffffff;
+    border: 1px solid #dedede;
+    border-radius: 22px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+.teacher-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    padding: 4px;
+    border: 2px solid #f0f0f0;
+    margin-bottom: 12px;
+}
+
+.teacher-name {
+    font-size: 25px;
+    font-weight: 400;
+    color: #303030;
+    margin-bottom: 5px;
+}
+
+.teacher-designation {
+    font-size: 16px;
+    color: #777777;
+    margin-bottom: 18px;
+}
+
+.teacher-details {
+    min-height: 30px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #303030;
+    margin-bottom: 12px;
+}
+
+.teacher-card .social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    margin: 12px 0 22px;
+}
+
+.teacher-card .social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fafafa;
+    color: #777777;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.teacher-card .social-links a:hover {
+    background: #90a2bd;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
 
 
 
 
-/* footer section  */
+
+@media (max-width: 400px) {
+    .teacher-card {
+        width: 100%;
+    }
+
+    .teacher-name {
+        font-size: 25px;
+    }
+}
+
+
+
+
+/* ----------- footer section ----------  */
 .site-footer {
     background: #172337;
     color: #d0d8e4;
