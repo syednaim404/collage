@@ -40,13 +40,13 @@
 
 
 /* ---------- scroll text section ----------  */
-.notice-content {
+.scroll-text-section .notice-content {
     overflow: hidden;
     white-space: nowrap;
     flex-grow: 1;
 }
 
-.notice-text {
+.scroll-text-section .notice-text {
     display: inline-block;
     white-space: nowrap;
     padding-left: 100%;
@@ -65,18 +65,18 @@
 
 
 /* ----------Notice Section ---------- */
-.notice .table td a:hover {
+.notice-section .notice .table td a:hover {
     /* color: #0d6efd !important; */
     text-decoration: underline !important;
 }
 
-.notice .table thead.notice-header th {
+.notice-section .notice .table thead.notice-header th {
     background-color: #198754;
     color: #fff;
     border-color: #198754;
 }
 
-.view-all-btn {
+.notice-section .view-all-btn {
     background: #eff6ff;
     color: #2563eb;
     border: none;
@@ -86,14 +86,14 @@
     text-decoration: none;
 }
 
-.view-all-btn:hover {
+.notice-section .view-all-btn:hover {
     background: #dbeafe;
     color: #2563eb;
 }
 
 /*------------- principle card section ----------- */
 
-.teacher-card {
+.principal-section .teacher-card {
     width: 350px;
     max-width: 100%;
     padding: 20px 16px 16px;
@@ -105,12 +105,12 @@
     transition: all 0.3s ease;
 }
 
-.teacher-card:hover {
+.principal-section .teacher-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
 }
 
-.teacher-image {
+.principal-section .teacher-image {
     width: 180px;
     height: 180px;
     object-fit: cover;
@@ -121,28 +121,22 @@
     margin-bottom: 12px;
 }
 
-.teacher-name {
+ .principal-section .teacher-name {
     font-size: 25px;
     font-weight: 400;
     color: #303030;
     margin-bottom: 5px;
 }
 
-.teacher-designation {
+.principal-section .teacher-designation {
     font-size: 16px;
     color: #777777;
     margin-bottom: 18px;
 }
 
-.teacher-details {
-    min-height: 30px;
-    font-size: 16px;
-    line-height: 1.55;
-    color: #303030;
-    margin-bottom: 12px;
-}
 
-.teacher-card .social-links {
+
+.principal-section .teacher-card .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -150,7 +144,7 @@
     margin: 12px 0 22px;
 }
 
-.teacher-card .social-links a {
+.principal-section .teacher-card .social-links a {
     width: 42px;
     height: 42px;
     display: flex;
@@ -164,7 +158,7 @@
     transition: all 0.3s ease;
 }
 
-.teacher-card .social-links a:hover {
+.principal-section .teacher-card .social-links a:hover {
     background: #90a2bd;
     color: #ffffff;
     transform: translateY(-3px);
@@ -175,11 +169,11 @@
 
 
 @media (max-width: 400px) {
-    .teacher-card {
+    .principal-section .teacher-card {
         width: 100%;
     }
 
-    .teacher-name {
+    .principal-section .teacher-name {
         font-size: 25px;
     }
 }
@@ -187,13 +181,140 @@
 
 
 
+
+
+
+/* ---------------faculty section------------  */
+ /* Carousel Container */
+        .faculty-carousel {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Carousel Track */
+        .faculty-track {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 16px;
+            width: max-content;
+            animation: facultyAutoSlide var(--slide-duration, 45s) linear infinite;
+            will-change: transform;
+        }
+
+        /* Pause on hover */
+        .faculty-carousel:hover .faculty-track {
+            animation-play-state: paused;
+        }
+
+        /* Individual Card Wrapper */
+        .faculty-card {
+            flex: 0 0 230px;
+            width: 230px;
+            height: 100%;
+        }
+
+        /* Card Design */
+        .faculty-card a {
+            display: block;
+            height: 100%;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .faculty-card .card {
+            height: 100%;
+            overflow: hidden;
+            border: 1px solid #e5e5e5 !important;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .faculty-card .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+        }
+
+        .faculty-card .card-img-top {
+            display: block;
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 15px auto 0;
+        }
+
+        .faculty-card .card-body {
+            padding: 18px 15px;
+            text-align: center;
+        }
+
+        .faculty-card .card-title {
+            margin-bottom: 14px;
+            font-size: 17px;
+            font-weight: 600;
+        }
+
+        .faculty-card .card-text {
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .faculty-card .card-text i {
+           
+            margin-right: 5px;
+            color:gray;
+            font-size: 14px;
+        }
+        
+
+        /* Infinite Animation */
+        @keyframes facultyAutoSlide {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(calc(-1 * var(--slide-distance)));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .faculty-track {
+                gap: 12px;
+            }
+
+            .faculty-card {
+                flex-basis: 230px;
+                width: 230px;
+                height: 100%;
+            }
+
+            .faculty-card .card-img-top {
+                width: 130px;
+                height: 130px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .faculty-track {
+                animation: none;
+            }
+        }
+
+
+
+
+
 /* ----------- footer section ----------  */
-.site-footer {
+.footer-section {
     background: #172337;
     color: #d0d8e4;
 }
 
-.footer-title {
+.footer-section .footer-title {
     color: #ffffff;
     font-size: 18px;
     font-weight: 600;
@@ -201,7 +322,7 @@
     position: relative;
 }
 
-.footer-title::after {
+.footer-section .footer-title::after {
     content: "";
     display: block;
     width: 45px;
@@ -210,39 +331,39 @@
     margin-top: 10px;
 }
 
-.site-footer p {
+.footer-section  p {
     font-size: 14px;
     line-height: 1.9;
 }
 
-.footer-links {
+.footer-section .footer-links {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-links li {
+.footer-section .footer-links li {
     margin-bottom: 10px;
 }
 
-.footer-links a {
+.footer-section .footer-links a {
     color: #d0d8e4;
     text-decoration: none;
     font-size: 14px;
     transition: 0.3s;
 }
 
-.footer-links a:hover {
+.footer-section .footer-links a:hover {
     color: #20c997;
     padding-left: 5px;
 }
 
-.social-links {
+.footer-section .social-links {
     display: flex;
     gap: 10px;
 }
 
-.social-links a {
+.footer-section .social-links a {
     width: 38px;
     height: 38px;
     display: flex;
@@ -255,12 +376,12 @@
     transition: 0.3s;
 }
 
-.social-links a:hover {
+.footer-section .social-links a:hover {
     background: #198754;
     transform: translateY(-4px);
 }
 
-.footer-divider {
+.footer-section .footer-divider {
     border-color: #526074;
     margin: 35px 0 20px;
 }
