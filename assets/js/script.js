@@ -1,69 +1,100 @@
-const noticeText = document.querySelector('.notice-text');
-const noticeContent = document.querySelector('.notice-content');
+// ---------- Notice Scroll Section ----------
+const noticeText = document.querySelector(
+    '.scroll-text-section .notice-text'
+);
 
-// গতি: প্রতি সেকেন্ডে 150 পিক্সেল
-const speed = 150;
+const noticeContent = document.querySelector(
+    '.scroll-text-section .notice-content'
+);
+
+// Scrolling speed: 150 pixels per second
+const noticeSpeed = 150;
 
 function updateScrollSpeed() {
+    if (!noticeText || !noticeContent) {
+        return;
+    }
+
     const textWidth = noticeText.scrollWidth;
     const containerWidth = noticeContent.clientWidth;
 
     const distance = textWidth + containerWidth;
-    const duration = distance / speed;
+    const duration = distance / noticeSpeed;
 
     noticeText.style.setProperty(
         '--scroll-duration',
-        duration + 's'
+        `${duration}s`
     );
 }
+
 updateScrollSpeed();
+
 window.addEventListener('resize', updateScrollSpeed);
 
 
+// ---------- Faculty Carousel Section ----------
+document.querySelectorAll('.faculty-slider').forEach(carousel => {
 
+    const track = carousel.querySelector('.faculty-slider-track');
 
-// teacher section 
-  document.querySelectorAll('.faculty-carousel').forEach(carousel => {
-            const track = carousel.querySelector('.faculty-track');
+    if (!track) {
+        return;
+    }
 
-            function setScrollSpeed() {
-                const cards = track.querySelectorAll('.faculty-card');
-                const totalCards = cards.length;
+    function setScrollSpeed() {
+        const cards = track.querySelectorAll('.faculty-member-item');
+        const totalCards = cards.length;
 
-                // Original cards are the first half; duplicates are the second half.
-                const originalCardCount = totalCards / 2;
+        // Original cards are the first half; duplicates are the second half.
+        const originalCardCount = totalCards / 2;
 
-                if (!Number.isInteger(originalCardCount) || originalCardCount < 1) {
-                    return;
-                }
+        if (
+            !Number.isInteger(originalCardCount) ||
+            originalCardCount < 1
+        ) {
+            return;
+        }
 
-                const gap = parseFloat(getComputedStyle(track).gap) || 0;
-                let loopDistance = 0;
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        let loopDistance = 0;
 
-                // Measure the original cards and the gaps between them,
-                // including the gap before the duplicate set.
-                for (let i = 0; i < originalCardCount; i++) {
-                    loopDistance += cards[i].getBoundingClientRect().width;
-                    loopDistance += gap;
-                }
+        // Calculate the width of the original cards and their gaps.
+        for (let i = 0; i < originalCardCount; i++) {
+            loopDistance += cards[i].getBoundingClientRect().width;
 
-                track.style.setProperty('--slide-distance', `${loopDistance}px`);
+            // Add gap after each original card, including the last one.
+            loopDistance += gap;
+        }
 
-                // Constant scrolling speed: 80 pixels per second.
-                const speed = 80;
-                const duration = loopDistance / speed;
+        track.style.setProperty(
+            '--slide-distance',
+            `${loopDistance}px`
+        );
 
-                track.style.setProperty('--slide-duration', `${duration}s`);
-            }
+        // Constant scrolling speed: 80 pixels per second.
+        const facultySpeed = 80;
+        const duration = loopDistance / facultySpeed;
 
-            setScrollSpeed();
+        track.style.setProperty(
+            '--slide-duration',
+            `${duration}s`
+        );
+    }
 
-            window.addEventListener('resize', setScrollSpeed);
+    setScrollSpeed();
 
-            // Recalculate after images load.
-            track.querySelectorAll('img').forEach(img => {
-                if (!img.complete) {
-                    img.addEventListener('load', setScrollSpeed, { once: true });
-                }
+    window.addEventListener('resize', setScrollSpeed);
+
+    // Recalculate after images load.
+    track.querySelectorAll('img').forEach(img => {
+        if (!img.complete) {
+            img.addEventListener('load', setScrollSpeed, {
+                once: true
             });
-        });
+
+            img.addEventListener('error', setScrollSpeed, {
+                once: true
+            });
+        }
+    });
+});

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Test</title>
+    <title>Hatem Ali College</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -62,6 +62,12 @@
                 <div class="carousel-item active">
                     <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
                 </div>
+                <div class="carousel-item ">
+                    <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="assets/img/carousel1.jpg" class="d-block w-100" alt="...">
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
                 data-bs-slide="prev">
@@ -81,11 +87,11 @@
 
     <!-- scroll text section  -->
     <section class="scroll-text-section">
-        <div class="notice-bar d-flex align-items-center bg-light">
-            <div class="notice-title bg-danger p-3 px-5 fw-bold text-white">
+        <div class="notice-bar d-flex align-items-center bg-primary-subtle">
+            <div class="notice-title bg-danger py-3 px-4 fw-bold text-white">
                 Notice
             </div>
-            <div class="notice-content flex-grow-1">
+            <div class="notice-content flex-grow-1 ">
                 <div class="notice-text ">
                     আগামীকাল কলেজ বন্ধ থাকবে। সকল শিক্ষার্থীকে যথাসময়ে নোটিশ অনুসরণ করার জন্য অনুরোধ করা হলো। সকল
                     শিক্ষার্থীকে যথাসময়ে নোটিশ অনুসরণ করার জন্য অনুরোধ করা হলো।সকল শিক্ষার্থীকে যথাসময়ে নোটিশ অনুসরণ
@@ -283,7 +289,7 @@
 
 
                             <!-- Social Media Icons -->
-                            <div class="social-links">
+                            <div class="principal-social-links">
 
                                 <a href="#" aria-label="Facebook">
                                     <i class="bi bi-facebook"></i>
@@ -314,26 +320,111 @@
         </div>
     </section>
 
+    <!-- Gallery Section -->
+<section class="college-gallery py-5">
+    <div class="container">
 
-    <!-- ---------------- Feacher Section ---------------- -->
+       
+
+        <!-- Gallery Row 1 -->
+        <div class="row g-3 gallery-row">
+
+            <div class="col-12 col-md-3">
+                <a href="#" class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=700&q=80"
+                         alt="Tea tasting">
+                    <div class="gallery-caption">
+                        <h5>Tea tasting</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-5">
+                <a href="#" class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=80"
+                         alt="Modern building">
+                    <div class="gallery-caption">
+                        <h5>Our Campus</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <a href="#" class="gallery-item">
+                   <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80"
+                         alt="Green field">
+                    <div class="gallery-caption">
+                        <h5>Campus Garden</h5>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Gallery Row 2 -->
+        <div class="row g-3 gallery-row mt-0">
+
+            <div class="col-12 col-md-5">
+                <a href="#" class="gallery-item">
+                   <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80"
+                         alt="Nature">
+                    <div class="gallery-caption">
+                        <h5>Campus Activities</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-4">
+                <a href="#" class="gallery-item">
+                   <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80"
+                         alt="Event">
+                    <div class="gallery-caption">
+                        <h5>Cultural Programs</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-md-3">
+                <a href="#" class="gallery-item">
+                   <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
+                         alt="Outdoor activities">
+                    <div class="gallery-caption">
+                        <h5>Special Moments</h5>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- View All -->
+        <div class="gallery-view-all text-center mt-4">
+            
+            <a href="gallery.php">সব দেখুন</a>
+        </div>
+
+    </div>
+</section>
+
+   
+ <!-- ---------------- Feacher Section ---------------- -->
     <div class="container py-5">
-        <div class="faculty-carousel">
-            <div class="faculty-track">
+        <div class="faculty-slider">
+            <div class="faculty-slider-track">
 
                 <!-- Original Card 1 -->
-                <div class="faculty-card">
+                <div class="faculty-member-item">
                     <a href="details.php?id=2">
-                        <section class="card h-100">
+                        <section class="card faculty-member-card h-100">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg"
-                                 class="card-img-top" alt="নুশরাত জাহান">
+                                 class="card-img-top faculty-member-image" alt="নুশরাত জাহান">
 
-                            <div class="card-body">
-                                <h4 class="card-title">নুশরাত জাহান</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">নুশরাত জাহান</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Assistant Professor
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Bangla
                                 </p>
@@ -343,19 +434,19 @@
                 </div>
 
                 <!-- Original Card 2 -->
-                <div class="faculty-card">
+                <div class="faculty-member-item">
                     <a href="details.php?id=3">
-                        <section class="card h-100">
+                        <section class="card faculty-member-card h-100">
                             <img src="https://randomuser.me/api/portraits/men/45.jpg"
-                                 class="card-img-top" alt="মোহাম্মদ রহিম">
+                                 class="card-img-top faculty-member-image" alt="মোহাম্মদ রহিম">
 
-                            <div class="card-body">
-                                <h4 class="card-title">মোহাম্মদ রহিম</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">মোহাম্মদ রহিম</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Associate Professor
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Mathematics
                                 </p>
@@ -365,19 +456,19 @@
                 </div>
 
                 <!-- Original Card 3 -->
-                <div class="faculty-card">
+                <div class="faculty-member-item">
                     <a href="details.php?id=4">
-                        <section class="card h-100">
+                        <section class="card faculty-member-card h-100">
                             <img src="https://randomuser.me/api/portraits/women/68.jpg"
-                                 class="card-img-top" alt="ফাতেমা আক্তার">
+                                 class="card-img-top faculty-member-image" alt="ফাতেমা আক্তার">
 
-                            <div class="card-body">
-                                <h4 class="card-title">ফাতেমা আক্তার</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">ফাতেমা আক্তার</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Lecturer
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     English
                                 </p>
@@ -387,19 +478,19 @@
                 </div>
 
                 <!-- Original Card 4 -->
-                <div class="faculty-card">
+                <div class="faculty-member-item">
                     <a href="details.php?id=5">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/men/75.jpg"
-                                 class="card-img-top" alt="আব্দুল্লাহ আল মামুন">
+                                 class="card-img-top faculty-member-image" alt="আব্দুল্লাহ আল মামুন">
 
-                            <div class="card-body">
-                                <h4 class="card-title">আব্দুল্লাহ আল মামুন</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">আব্দুল্লাহ আল মামুন</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Assistant Professor
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Physics
                                 </p>
@@ -409,19 +500,19 @@
                 </div>
 
                 <!-- Original Card 5 -->
-                <div class="faculty-card">
+                <div class="faculty-member-item">
                     <a href="details.php?id=6">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/women/25.jpg"
-                                 class="card-img-top" alt="শারমিন সুলতানা">
+                                 class="card-img-top faculty-member-image" alt="শারমিন সুলতানা">
 
-                            <div class="card-body">
-                                <h4 class="card-title">শারমিন সুলতানা</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">শারমিন সুলতানা</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Lecturer
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Chemistry
                                 </p>
@@ -431,19 +522,19 @@
                 </div>
 
                 <!-- Original Card 6 -->
-                <div class="faculty-card">
+                <div class="faculty-member-item">
                     <a href="details.php?id=7">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/men/11.jpg"
-                                 class="card-img-top" alt="তানভীর হাসান">
+                                 class="card-img-top faculty-member-image" alt="তানভীর হাসান">
 
-                            <div class="card-body">
-                                <h4 class="card-title">তানভীর হাসান</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">তানভীর হাসান</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Senior Lecturer
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Biology
                                 </p>
@@ -455,19 +546,19 @@
                 <!-- Duplicate Cards for Infinite Scrolling -->
 
                 <!-- Duplicate Card 1 -->
-                <div class="faculty-card" aria-hidden="true">
+                <div class="faculty-member-item" aria-hidden="true">
                     <a href="details.php?id=2" tabindex="-1">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg"
-                                 class="card-img-top" alt="">
+                                 class="card-img-top faculty-member-image" alt="">
 
-                            <div class="card-body">
-                                <h4 class="card-title">নুশরাত জাহান</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">নুশরাত জাহান</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Assistant Professor
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Bangla
                                 </p>
@@ -477,19 +568,19 @@
                 </div>
 
                 <!-- Duplicate Card 2 -->
-                <div class="faculty-card" aria-hidden="true">
+                <div class="faculty-member-item" aria-hidden="true">
                     <a href="details.php?id=3" tabindex="-1">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/men/45.jpg"
-                                 class="card-img-top" alt="">
+                                 class="card-img-top faculty-member-image" alt="">
 
-                            <div class="card-body">
-                                <h4 class="card-title">মোহাম্মদ রহিম</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">মোহাম্মদ রহিম</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Associate Professor
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Mathematics
                                 </p>
@@ -499,19 +590,19 @@
                 </div>
 
                 <!-- Duplicate Card 3 -->
-                <div class="faculty-card" aria-hidden="true">
+                <div class="faculty-member-item" aria-hidden="true">
                     <a href="details.php?id=4" tabindex="-1">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/women/68.jpg"
-                                 class="card-img-top" alt="">
+                                 class="card-img-top faculty-member-image" alt="">
 
-                            <div class="card-body">
-                                <h4 class="card-title">ফাতেমা আক্তার</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">ফাতেমা আক্তার</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Lecturer
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     English
                                 </p>
@@ -521,19 +612,19 @@
                 </div>
 
                 <!-- Duplicate Card 4 -->
-                <div class="faculty-card" aria-hidden="true">
+                <div class="faculty-member-item" aria-hidden="true">
                     <a href="details.php?id=5" tabindex="-1">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/men/75.jpg"
-                                 class="card-img-top" alt="">
+                                 class="card-img-top faculty-member-image" alt="">
 
-                            <div class="card-body">
-                                <h4 class="card-title">আব্দুল্লাহ আল মামুন</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">আব্দুল্লাহ আল মামুন</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Assistant Professor
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Physics
                                 </p>
@@ -543,19 +634,19 @@
                 </div>
 
                 <!-- Duplicate Card 5 -->
-                <div class="faculty-card" aria-hidden="true">
+                <div class="faculty-member-item" aria-hidden="true">
                     <a href="details.php?id=6" tabindex="-1">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/women/25.jpg"
-                                 class="card-img-top" alt="">
+                                 class="card-img-top faculty-member-image" alt="">
 
-                            <div class="card-body">
-                                <h4 class="card-title">শারমিন সুলতানা</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">শারমিন সুলতানা</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Lecturer
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Chemistry
                                 </p>
@@ -565,19 +656,19 @@
                 </div>
 
                 <!-- Duplicate Card 6 -->
-                <div class="faculty-card" aria-hidden="true">
+                <div class="faculty-member-item" aria-hidden="true">
                     <a href="details.php?id=7" tabindex="-1">
-                        <section class="card">
+                        <section class="card faculty-member-card">
                             <img src="https://randomuser.me/api/portraits/men/11.jpg"
-                                 class="card-img-top" alt="">
+                                 class="card-img-top faculty-member-image" alt="">
 
-                            <div class="card-body">
-                                <h4 class="card-title">তানভীর হাসান</h4>
-                                <p class="card-text">
+                            <div class="card-body faculty-member-body">
+                                <h4 class="card-title faculty-member-name">তানভীর হাসান</h4>
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-briefcase"></i>
                                     Senior Lecturer
                                 </p>
-                                <p class="card-text">
+                                <p class="card-text faculty-member-detail">
                                     <i class="fa-solid fa-book"></i>
                                     Biology
                                 </p>
@@ -589,8 +680,6 @@
             </div>
         </div>
     </div>
-
-
 
 
 
@@ -654,7 +743,7 @@
 
                     <p>আমাদের সঙ্গে যুক্ত থাকুন।</p>
 
-                    <div class="social-links">
+                    <div class="footer-social-links">
                         <a href="#" aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
